@@ -12,7 +12,7 @@ double *gaussElimination(double **M,int m, int n){
     for(i=0;i<m-1;i++){
         //Partial Pivoting
         for(k=i+1;k<m;k++){
-            //If diagonal element(absolute vallue) is smaller than any of the terms below it
+            //If diagonal element(absolute value) is smaller than any of the terms below it
             if(fabs(M[i][i])<fabs(M[k][i])){
                 //Swap the rows
                 for(j=0;j<n;j++){                
@@ -56,15 +56,15 @@ void solution_GaussEl(double *x,int n){
 *****SOLVING SYSTEM OF LINEAR EQUATIONS WITH*******
 *****GAUSS Jordan ELIMINATION **********************
 **************************************************/
-double *gaussJordan(double **M,int n){
+double *gaussJordan(double **M,int n ){
     int i,j,k;
-    double c;
+    double c=1,b[3];
     double *x;
-    x = malloc(30*sizeof(double *));
+    x = malloc(n*sizeof(double *));
    /* Now finding the elements of diagonal matrix */
-    for(j=0; j<=n; j++)
+    for(j=0; j<n; j++)
     {
-        for(i=0; i<=n; i++)
+        for(i=0; i<n; i++)
         {
             if(i!=j)
             {
@@ -76,13 +76,23 @@ double *gaussJordan(double **M,int n){
             }
         }
     }
-    for(i=0; i<=n; i++)
+  
+    for(i=0; i<n; i++)
     {
-        x[i]=M[i][n+1]/M[i][i];
+        x[i]=M[i][n]/M[i][i];
     }
     return x;
 }
 
+
+void solution_GaussJ(double *x,int n){
+    int i;
+    printf("\nThe solution is: \n");
+    for(i=0; i<n; i++)
+    {
+        printf("\n x%d=%f\n",i,x[i]);
+    }
+}
 
 
 

@@ -12,6 +12,4 @@ This a set of code related to linear algebra.
 - [ ] [Determinant](https://en.wikipedia.org/wiki/Determinant)
 - [X] [Squaring](https://en.wikipedia.org/wiki/Matrix_multiplication)
 
-Without the mark X, is need to write and a Gauss Jordan is broken.
-
-Need to fix Gauss Jordan
+Without the mark X, means undone
