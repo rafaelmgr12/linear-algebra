@@ -8,10 +8,10 @@ This a set of code related to linear algebra.
 
 ## [Manipulation with matrix]
 - [x] [Transpose]
-- [] [Trace]
-- [] [Determinant]
+- [ ] [Trace]
+- [ ] [Determinant]
 - [X] [Squaring]
 
 Without the mark X, is need to write and a Gauss Jordan is broken.
 
-Need to fix
+Need to fix Gauss Jordan
